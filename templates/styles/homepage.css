@@ -1,0 +1,38 @@
+*{
+    font-family: lato;
+  }
+  body{
+    height: 100%;
+  }
+  
+  h1{
+    font-weight:900;
+    letter-spacing: 0.2em;
+    text-align: center;
+    font-size: 4vh;
+  
+    margin-top: 4vh;
+  }
+  
+  .content{
+    width: 50%;
+    height: 80vh;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  }
+  
+  .rectangle{
+    height: 18vh;
+    width: 15vw;
+    margin: 1.5vh 0.7vw;
+    text-align: center;
+    background-color: tomato;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
