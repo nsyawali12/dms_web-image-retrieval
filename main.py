@@ -37,6 +37,15 @@ def homepage():
 app.register_blueprint(ocr_page, url_prefix='/ocr_json')
 app.register_blueprint(searchable_pdf_merge, url_prefix='/search_merger')
 
+@app.route('/ocr_json/ocr_index/')
+def nav_ocr():
+    return render_template('doc_json.html')
+
+@app.route('/search_merger/search_index/')
+def nav_searchable():
+    return render_template('doc_json.html')
+
+
 # @app.route('/search_merge')
 # def searchable_merge():
 #     return render_template('search_merge.html')

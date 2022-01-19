@@ -24,7 +24,7 @@ ocr_page = Blueprint('ocr_json', __name__)
 
 def allowed_file(filename):
     return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+      filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def ocr_for_pdf_json(filename_for_pdf):
     get_pre_img = read_preprocessing(filename_for_pdf)
