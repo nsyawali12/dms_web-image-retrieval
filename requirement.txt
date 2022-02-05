@@ -1,0 +1,13 @@
+requests
+PyPDF2
+numpy
+pandas
+flask
+pdf2img
+easyocr
+spacy
+IPython
+matplotlib
+img2pdf
+pytesseract
+fpdf
