@@ -1,6 +1,7 @@
 import os
 import requests
 import json
+import sys
 from re import search
 from PyPDF2 import merger
 from cv2 import merge
@@ -14,9 +15,17 @@ import PyPDF2
 from PyPDF2 import PdfFileMerger
 
 
-### importing another page python
-from ocr_json import ocr_page
-from search_merger import searchable_pdf_merge
+### importing another page python flask services
+
+sys.path.insert(1, './pdf_to_ocr_json/ocr_image_processing_json')
+# from pdf_to_ocr_json.ocr_image_processing_json.ocr_image_json_service import ocr_imageprocess_json_service
+import ocr_image_json_service
+from ocr_image_json_service import ocr_imageprocess_json_service
+
+sys.path.insert(1, './searchable')
+import searchable_service
+from searchable_service import searchable_pdf_service
+# from searchable.searchable_service import searchable_pdf_service
 
 UPLOAD_FOLDER = './upload'
 ALLOWED_EXTENSIONS = set(['pdf','PDF', 'jpg', 'png'])
@@ -34,16 +43,16 @@ def homepage():
 # def doc_json():
 #     return render_template('doc_json.html')
 
-app.register_blueprint(ocr_page, url_prefix='/ocr_json')
-app.register_blueprint(searchable_pdf_merge, url_prefix='/search_merger')
+app.register_blueprint(ocr_imageprocess_json_service, url_prefix='/ocr_image_json_service')
+app.register_blueprint(searchable_pdf_service, url_prefix='/searchable_service')
 
-@app.route('/ocr_json/ocr_index/')
+@app.route('/ocr_image_json_service/ocr_img_index/')
 def nav_ocr():
-    return render_template('doc_json.html')
+    return render_template('ocr_img_process_json.html')
 
-@app.route('/search_merger/search_index/')
+@app.route('/searchable_service/searchable_index/')
 def nav_searchable():
-    return render_template('doc_json.html')
+    return render_template('searchable.html')
 
 
 # @app.route('/search_merge')

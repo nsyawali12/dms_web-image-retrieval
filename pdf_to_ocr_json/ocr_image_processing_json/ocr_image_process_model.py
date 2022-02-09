@@ -44,7 +44,7 @@ def read_preprocessing(filename_pdf):
 
   # this section finish if the user only need the image pdf not the pages
   # Store all the page
-  pdf_pages = convert_from_path(file_pdf, 500)
+  pdf_pages = convert_from_path(file_pdf, 500, poppler_path=r'C:\Program Files\Release-22.01.0-0\poppler-22.01.0\Library\bin')
 
   # the index counter store for each images
   image_counter = 1 
@@ -83,7 +83,7 @@ tahap penggunaan OCR, hasil dari OCR dapat dilihat dengan box-box pada tulisan y
 Mendfinisikan bahasa dan font yang akan digunakan, yaitu bahasa indonesia
 """
 
-def ocr_json_phase(pre_img):
+def ocr_json_after_image_process(pre_img):
   # 'en' = English
   # 'id' = Indonesia
   reader = easyocr.Reader(['id'])

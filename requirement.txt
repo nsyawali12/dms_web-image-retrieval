@@ -11,3 +11,4 @@ matplotlib
 img2pdf
 pytesseract
 fpdf
+python-poppler
