@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ocr_json</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+    <h1> OCR Pages</h1>
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+                <h1>
+                    Upload the PDF file
+                </h1>
+
+                <form action="{{ url_for('ocr_image_json_service.upload_file')}}" method="POST" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <label> select pdf file</label>
+                        <div class="custom-file">
+                            <input name="ocr_file_image_process" type="file" class="custom-file-input" id="pdf">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"> Upload </button>
+                </form>
+
+            </div>
+        </div>
+        <br>
+    </div>
+</body>
+
+</html
