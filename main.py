@@ -17,10 +17,10 @@ from PyPDF2 import PdfFileMerger
 
 ### importing another page python flask services
 
-sys.path.insert(1, './pdf_to_ocr_json/ocr_image_processing_json')
+sys.path.insert(1, './pdf_to_ocr_json/ocr_pdf')
 # from pdf_to_ocr_json.ocr_image_processing_json.ocr_image_json_service import ocr_imageprocess_json_service
-import ocr_image_json_service
-from ocr_image_json_service import ocr_imageprocess_json_service
+import ocr_pdf_service
+from ocr_pdf_service import ocr_pdf_json_service
 
 sys.path.insert(1, './searchable')
 import searchable_service
@@ -43,10 +43,10 @@ def homepage():
 # def doc_json():
 #     return render_template('doc_json.html')
 
-app.register_blueprint(ocr_imageprocess_json_service, url_prefix='/ocr_image_json_service')
+app.register_blueprint(ocr_pdf_json_service, url_prefix='/ocr_pdf_service')
 app.register_blueprint(searchable_pdf_service, url_prefix='/searchable_service')
 
-@app.route('/ocr_image_json_service/ocr_img_index/')
+@app.route('/ocr_pdf_service/ocr_pdf_index/')
 def nav_ocr():
     return render_template('ocr_img_process_json.html')
 
