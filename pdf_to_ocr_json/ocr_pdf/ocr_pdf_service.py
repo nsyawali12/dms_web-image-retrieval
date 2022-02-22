@@ -10,7 +10,7 @@ from werkzeug.utils import  secure_filename, send_from_directory
 from werkzeug.wrappers import response
 
 import ocr_pdf_model
-from ocr_pdf_model import read_preprocessing, ocr_json_after_image_process
+from ocr_pdf_model import read_PDF_preprocessing, ocr_json_pdf_process
 # from pdf_to_ocr_json.ocr_image_processing_json import ocr_image_process_model
 # from ocr_image_process_model import read_preprocessing, ocr_json_phase
 
@@ -29,8 +29,8 @@ def allowed_file(filename):
       filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def get_ocr_pdf_json(filename_for_pdf):
-    get_pre_img = read_preprocessing(filename_for_pdf)
-    get_OCR_json = ocr_json_after_image_process(get_pre_img)
+    get_pre_img = read_PDF_preprocessing(filename_for_pdf)
+    get_OCR_json = ocr_json_pdf_process(get_pre_img)
 
     # dict_sampe = {
     #   "file_output": filename_for_pdf,

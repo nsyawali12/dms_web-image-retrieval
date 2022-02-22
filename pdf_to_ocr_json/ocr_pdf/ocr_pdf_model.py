@@ -38,7 +38,7 @@ def draw_boxes(image, bounds, color='yellow', width=2):
           print(bound[1])
     return image
 
-def read_preprocessing(filename_pdf):
+def read_PDF_preprocessing(filename_pdf):
   # path to read pdf
   file_pdf = filename_pdf
 
@@ -83,7 +83,7 @@ tahap penggunaan OCR, hasil dari OCR dapat dilihat dengan box-box pada tulisan y
 Mendfinisikan bahasa dan font yang akan digunakan, yaitu bahasa indonesia
 """
 
-def ocr_json_after_image_process(pre_img):
+def ocr_json_pdf_process(pre_img):
   # 'en' = English
   # 'id' = Indonesia
   reader = easyocr.Reader(['id'])
