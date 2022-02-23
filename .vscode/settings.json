@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "./ocr_to_json/ocr_image",
+        "./ocr_to_json/ocr_pdf",
+        "./searchable"
+    ]
+}
