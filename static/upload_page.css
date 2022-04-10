@@ -1,0 +1,50 @@
+.container {
+    margin-top: 20px;
+  }
+
+.well {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+
+.well .file-input {
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    z-index: 99;
+    font-size: 50px;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: progid: DXImageTransform.Microsoft.Alpha(opacity=0)
+}
+
+/* input {
+    
+} */
+
+input[type="file"] {
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    margin-left: -200px;
+    height: 200px;
+    z-index: 0;
+}
+
+.well i {
+    font-size: 15rem;
+    text-shadow: 10px 10px 10px #646464;
+}
+
+.well .clear i {
+    font-size: 2.5rem;
+}
+
+.well img {
+    width: 100%;
+    height: 280px;
+}
