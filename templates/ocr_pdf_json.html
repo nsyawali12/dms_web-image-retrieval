@@ -8,15 +8,52 @@
     <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="/static/upload_page.css">
 
 </head>
 
 <body>
-    <h1> OCR Pages</h1>
     <div class="container">
         <div class="row">
 
-            <div class="col">
+            <div class="col-lg-6 col-lg-offset-3">
+                <form action="{{ url_for('ocr_pdf_service.upload_file')}}" method="POST" enctype="multipart/form-data">
+                    <div class="well">
+                        <div class="upload-info">
+
+                            <h1> PDF OCR Page</h1>
+
+                            <div class="upload-data">
+                                <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                                
+                                
+                                <input name="ocr_file_pdf" type="file" id="pdf" class="custom-file-input">
+                                
+                                
+                            
+                                <p> Click any where to select file</p>
+                                
+                            </div>
+
+                            <button type="submit" class="btn btn-primary"> Upload </button>
+                           
+
+
+                        </div>
+                        
+
+                        
+
+                    </div>
+
+                <div id="hyperlink_text" style="display: block;">
+                </div>
+                </form>
+            </div>
+
+            <!-- <div class="col">
                 <h1>
                     Upload the PDF file
                 </h1>
@@ -33,10 +70,12 @@
                     <button type="submit" class="btn btn-primary"> Upload </button>
                 </form>
 
-            </div>
+            </div> -->
         </div>
         <br>
     </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 </body>
 
 </html
