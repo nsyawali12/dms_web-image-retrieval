@@ -82,5 +82,5 @@ def upload_file():
 
           return res_json
 
-      return "Request ocr lancar"
+      return "Request ocr done"
 
